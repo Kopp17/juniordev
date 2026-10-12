@@ -87,7 +87,7 @@ footer{text-align:center;padding:30px;color:var(--mu);font-size:13px;border-top:
 <section id="about"><div class="stats reveal">
  <div class="stat"><b data-n="12">0</b>jours de mission terrain</div>
  <div class="stat"><b data-n="4">0</b>villes visitées</div>
- <div class="stat"><b data-n="10">0</b>projets terminés</div>
+ <div class="stat"><b data-n="12">0</b>projets terminés</div>
  <div class="stat"><b data-n="2">0</b>permis de conduire (A, B)</div></div></section>
 <section id="skills"><h2 class="reveal">Mes <em>compétences</em></h2><div class="grid">
  <div class="card reveal"><i>🛠️</i><h3>Support &amp; maintenance</h3><p>Installation et suivi d'équipements, assistance technique sur site, reporting de mission.</p></div>
@@ -149,6 +149,8 @@ const PJ=[
 {c:'web',t:'Le Baobab — Site de restaurant animé',d:'Restaurant ivoirien : braises qui montent, assiette qui tourne, ingrédients qui se rassemblent en défilant, menu filtrable, commande et réservation par WhatsApp ou e-mail.',tags:['Motion design','JavaScript','Canvas','WhatsApp'],img:['resto-1','resto-3','resto-2'],demo:'resto/'},
 {c:'web',t:'Awa & Koffi — Invitation de mariage animée',d:'Invitation qui s\'ouvre comme une enveloppe, compte à rebours, programme qui se dessine, ajout au calendrier et confirmation de présence par WhatsApp ou e-mail.',tags:['Motion design','JavaScript','Canvas','Calendrier'],img:['mariage-1','mariage-2','mariage-3'],demo:'mariage/'},
 {c:'web',t:'Transport Ivoire — Réservation de trajets',d:'Site vitrine de transport : présentation des services, transferts aéroport, déplacements professionnels et formulaire de demande préparant un message WhatsApp.',tags:['HTML','CSS','JavaScript','Responsive','WhatsApp'],img:['transport-ivoire'],demo:'transport/'},
+{c:'web',t:'Maison Adjoua — Salon de coiffure et beauté',d:'Salon à Cocody : une tresse qui se tisse à l\'écran et suit la souris, choix des prestations avec total en FCFA et durée, créneaux calculés selon les horaires du salon, réservation par WhatsApp ou e-mail.',tags:['Animation SVG','JavaScript','Réservation','WhatsApp'],img:['salon-1','salon-2','salon-3'],demo:'salon/'},
+{c:'web',t:'Ébène — Chocolatier, site premium en motion design',d:'Preloader en pourcentage avec cabosse qui se remplit, page qui s\'ouvre en iris, histoire du cacao épinglée au défilement avec fond qui change de couleur, tablettes en 3D, panier animé et commande par WhatsApp.',tags:['Motion design','Preloader','Défilement','3D','WhatsApp'],img:['chocolat-1','chocolat-2','chocolat-3'],demo:'chocolat/'},
 {c:'py',t:'Gestion de parc informatique',d:'Application Python avec base de données : suivi des équipements, tickets d\'assistance par priorité et statut, export CSV. La démo en ligne est une version JavaScript.',tags:['Python','Flask','SQLite'],img:['parc-1','parc-2','parc-3'],demo:'parc/',code:'https://github.com/kopp17/gestion-parc-it'}];
 const pj=document.getElementById('pj');
 pj.innerHTML=PJ.map((p,i)=>`<article class="pc reveal" data-c="${p.c}"><div class="im" data-i="${i}"><img src="img/${p.img[0]}.jpg" alt="${p.t}" loading="lazy"><span>🔍 ${p.img.length} captures</span></div><div class="bd"><h3>${p.t}</h3><p>${p.d}</p><div class="tg">${p.tags.map(t=>`<i>${t}</i>`).join('')}</div>${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">▶ Démo en direct</a>`:''}${p.code?`<a href="${p.code}" target="_blank" rel="noopener">&lt;/&gt; Code source</a>`:''}</div></article>`).join('');
